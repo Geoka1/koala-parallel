@@ -31,3 +31,7 @@ The top-level `main.sh` script is a quick script for downloading dependencies an
 ```
 
 For more information and context on the benchmarks used, please visit the [Koala](https://github.com/binpash/benchmarks) repository.
+
+# License
+
+The Koala Benchmarks are licensed under the MIT License. See the LICENSE file for more information.
