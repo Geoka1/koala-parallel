@@ -21,7 +21,6 @@ jobs:
           - covid-mts
           - file-enc
           - log-analysis
-          - makeself
           - max-temp
           - media-conv
           - nlp
