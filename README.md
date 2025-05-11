@@ -10,7 +10,7 @@ Each benchmark has been transformed to use GNU parallel where applicable. All tr
 | `covid-mts`    | 24   | identify parallelizable parts, use temp file                           |
 | `file-enc`     | 8    | convert loop to `find`, export to function, apply parallel             |
 | `log-analysis` | 17   | wrap calls with `parallel`, use temp files                             |
-| `makeself`     |  0   |                                                                       |
+| `makeself`     |  0   |                                                                        |
 | `max-temp`     | 6    | identify region, wrap calls, run in parallel                           |
 | `media-conv`   | 4    | par/ize loop                                                           |
 | `nlp`          | 3/script | loops only (~60 loc total)                                         |
@@ -19,7 +19,7 @@ Each benchmark has been transformed to use GNU parallel where applicable. All tr
 | `sklearn`      | 10   | same                                                                   |
 | `unix50`       | 36   | break input per script                                                 |
 | `vps-audit`    | 80   | wrap and export functions                                              |
-| `web-index`    | 0    |                                                                        |
+| `web-index`    | 3    | rewrite parallelism using parallel                                     |
 
 
 ## Instructions
