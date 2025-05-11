@@ -15,7 +15,6 @@ process_sample() {
     pop=$(echo "$s_line" | cut -f 1 -d " ")
 
     if [ -z "$pop" ] || [ -z "$sample" ]; then
-        echo "[skip] Invalid line: '$s_line'" >&2
         return 0
     fi
 
