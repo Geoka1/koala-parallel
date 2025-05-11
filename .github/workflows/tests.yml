@@ -2,13 +2,11 @@ name: Run benchmarks
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
   pull_request:
 
 env:
-  REGISTRY: ghcr.io
-  IMAGE_NAME: ghcr.io/geoka1/koala-parallel:main
+  REGISTRY: ghcr.io        # only constant values live here
 
 jobs:
   run-benchmark:
@@ -22,7 +20,6 @@ jobs:
           - covid-mts
           - file-enc
           - log-analysis
-          - makeself
           - max-temp
           - media-conv
           - nlp
@@ -36,6 +33,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+
+      - name: Derive lowercase IMAGE_NAME
+        run: echo "IMAGE_NAME=${GITHUB_REPOSITORY,,}" >>"$GITHUB_ENV"
 
       - name: Log in to GHCR
         uses: docker/login-action@v2
