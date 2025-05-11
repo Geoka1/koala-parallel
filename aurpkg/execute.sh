@@ -5,7 +5,7 @@ IN="$REPO_TOP/aurpkg/inputs/packages"
 OUT="${OUT:-$REPO_TOP/aurpkg/outputs}"
 KOALA_SHELL="${KOALA_SHELL:-bash}"
 SCRIPT="./scripts/pacaur.sh"
-
+mkdir -p "${OUT}"
 for arg in "$@"; do
   if [ "$arg" = "--small" ]; then
     IN="$REPO_TOP/aurpkg/inputs/packages_small"

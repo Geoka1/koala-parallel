@@ -29,6 +29,10 @@ for arg in "$@"; do
       suffix="small"
     fi
 done
+# if file exists, do not download
+if [[ -f "$input_dir/temperatures.$suffix.txt" ]]; then
+  exit 0
+fi
 
 seq "$FROM" "$TO" |
   sed "s;^;$URL;" |
